@@ -1,1 +1,1 @@
-# mfextaddon_soprano
+# mfextaddon_soprano (0.7 branch)
