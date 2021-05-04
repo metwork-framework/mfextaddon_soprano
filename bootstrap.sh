@@ -19,7 +19,6 @@ if test "${1:-}" = ""; then
     exit 1
 fi
 
-#useless comment
 MFEXT_HOME=$(get_abs_filename "$1")
 export MFEXT_HOME
 MFEXT_VERSION=$(cat "${MFEXT_HOME}/config/version")
