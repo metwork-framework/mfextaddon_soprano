@@ -116,3 +116,6 @@ echo "::set-output name=skip_dispatch::${SKIP_DISPATCH}"
 
 echo "::set-output name=rpm_dir::/private/metwork_addons/${CI}/rpms/${B}/${OS_VERSION}"
 echo "::set-output name=doc_dir::/private/metwork_addons/${CI}/docs/${B}/mfextaddon_soprano"
+
+echo "::set-output name=nexus_dir::https://artifacts.cloudmf.dev/repository/rpm-releases-metwork-addons/${B}/${OS_VERSION}/";
+
