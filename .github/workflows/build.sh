@@ -22,7 +22,7 @@ rm -rf html_doc rpms .build_hash
     yum -y localinstall `ls -lrt /private/metwork_addons/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/metwork-mfext-layer-python3_radartools* | tail -1 | awk '{print $NF}'`
 
 
-
+git config --global --add safe.directory /src
 cd /src
 
 
