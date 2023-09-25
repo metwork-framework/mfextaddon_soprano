@@ -18,8 +18,8 @@ rm -rf html_doc rpms .build_hash
     if test "${OS_VERSION}" = "centos8"; then export METWORK_BUILD_OS=generic; else export METWORK_BUILD_OS=${OS_VERSION}; fi
 
 
-    yum -y localinstall `ls -lrt /private/metwork_addons/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/metwork-mfext-layer-radartools* | tail -1 | awk '{print $NF}'`
-    yum -y localinstall `ls -lrt /private/metwork_addons/continuous_integration/rpms/${DRONE_BRANCH}/${OS_VERSION}/metwork-mfext-layer-python3_radartools* | tail -1 | awk '{print $NF}'`
+    yum install -y metwork-mfext-layer-radartools-${BRANCH##release_}
+    yum install -y metwork-mfext-layer-python3_radartools-${BRANCH##release_}
 
 
 
