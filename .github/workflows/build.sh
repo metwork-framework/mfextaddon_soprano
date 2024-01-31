@@ -20,7 +20,6 @@ rm -rf html_doc rpms .build_hash
 
     yum install -y metwork-mfext-layer-radartools-${BRANCH##release_}
     yum install -y metwork-mfext-layer-python3_radartools-${BRANCH##release_}
-    yum install -y metwork-mfext-layer-python3_ia-${BRANCH##release_}
 
 
 
