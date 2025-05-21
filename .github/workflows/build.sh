@@ -21,6 +21,7 @@ rm -rf html_doc rpms .build_hash
     yum install -y metwork-mfext-layer-radartools-${BRANCH##release_}
     yum install -y metwork-mfext-layer-python3_radartools-${BRANCH##release_}
     yum install -y metwork-mfext-layer-python3_ia-${BRANCH##release_}
+    yum install -y metwork-mfext-layer-python3_extratools-${BRANCH##release_}
 
 
 
@@ -57,7 +58,7 @@ if test -f "${BUILDCACHE}/build_hash_mfextaddon_soprano_${BRANCH}_`cat .build_ha
     echo "buildcache=null" >> github_output
     exit 0
 fi
- 
+
 
 if test -d docs; then make docs >${BUILDLOGS}/make_doc.log 2>&1 || ( tail -200 ${BUILDLOGS}/make_doc.log ; exit 1 ); fi
 if test -d doc; then make doc >${BUILDLOGS}/make_doc.log 2>&1 || ( tail -200 ${BUILDLOGS}/make_doc.log ; exit 1 ); fi
@@ -77,6 +78,6 @@ rm -f ./build_hash
 chown 1018:1018 ${hash_file}
 chmod 664 ${hash_file}
 echo "buildcache=${hash_file}" >> github_output
- 
+
 
 echo "bypass=false" >> github_output
